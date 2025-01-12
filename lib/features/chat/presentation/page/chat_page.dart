@@ -176,8 +176,8 @@ class _ChatPageState extends State<ChatPage> {
                           icon: Icon(Icons.send),
                           color: Colors.white,
                           onPressed: () {
-                            var data = 
-                            context.read<GetchatBloc>()
+                            // _scroll();
+                            var data = context.read<GetchatBloc>()
                               ..add(
                                   SendMassageEvent(widget.id!, _massage.text));
                             socket?.emit("newMessage", data);
